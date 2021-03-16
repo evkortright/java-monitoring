@@ -24,9 +24,14 @@ curl localhost:8080/friend/all
 
 ## Run mysqlservice instrumented with the Elastic Java Agent
 java -javaagent:../agent/elastic-apm-agent-1.17.0.jar \
+
  -Delastic.apm.service_name=mysqlservice \\
+
  -Delastic.apm.server_urls=<YOUR_APM_SERVER_URL> \\
+
  -Delastic.apm.secret_token=<YOUR_SECRET_TOKEN> \\
+
  -Delastic.apm.application_packages=com.example \\
+
  -jar target/mysql-service-0.0.1-SNAPSHOT.jar 
 
